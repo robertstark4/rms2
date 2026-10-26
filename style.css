@@ -176,3 +176,57 @@ font-size: 1rem; }
   .hero-bottom span { max-width: 180px; }
   .hero-bottom { align-items: end; }
 }
+
+
+/* Mobile: stack the skills section vertically */
+@media screen and (max-width: 760px) {
+  #skills .skills-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 32px !important;
+    width: 100% !important;
+  }
+
+  #skills .skills-grid > div,
+  #skills .skill-groups {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  #skills .skills-grid h2 {
+    font-size: clamp(3rem, 12vw, 4.5rem) !important;
+    line-height: 0.98;
+    overflow-wrap: normal;
+  }
+
+  #skills .skills-intro {
+    max-width: 100%;
+  }
+
+  /* Skill categories appear BELOW the headline and paragraph */
+  #skills .skill-groups {
+    display: block !important;
+  }
+
+  #skills .skill-group {
+    width: 100% !important;
+  }
+
+  /* Pills flow horizontally, then wrap to the next line */
+  #skills .pills {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+
+  #skills .pills span {
+    flex: 0 1 auto !important;
+    width: auto !important;
+    max-width: 100%;
+    white-space: normal;
+  }
+}
